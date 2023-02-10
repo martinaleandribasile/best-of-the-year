@@ -5,8 +5,8 @@
 <title>Pagina</title>
 </head>
 <body>
-<h1>Best of the year by <span th:text="${name}"></span></h1>
-
+<!--<h1>Best of the year by <span th:text="${name}"></span></h1>-->
+<h1 th:text="'Best of the year by ' + ${name}"></h1>
 
 </body>
 </html>
