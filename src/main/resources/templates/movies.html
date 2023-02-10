@@ -11,7 +11,7 @@ Lista dei movies
 </h1>
 <!--<p th:text="${films}"></p>-->
 <ul th:each="film: ${films}">
-    <li th:text="${film.getTitolo()}" />
+    <li th:text="${film}" /> //usando il tostring
 </ul>
 </body>
 </html>
