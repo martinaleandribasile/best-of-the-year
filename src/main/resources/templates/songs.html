@@ -10,9 +10,9 @@
 Lista delle canzoni
 </h1>
 <!--<p th:text="${canzoni}"></p>-->
-<ul th:each="canzone: ${canzoni}">
+<ol >
 <!--	usando il metodo specifico -->
-    <li th:text="${canzone.getTitolo()}" />
-</ul>
+    <li th:each="canzone: ${canzoni}"><p th:text="${canzone.getTitolo()}"></p></li>
+</ol>
 </body>
 </html>
