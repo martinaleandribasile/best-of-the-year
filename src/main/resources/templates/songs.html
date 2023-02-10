@@ -11,7 +11,8 @@ Lista delle canzoni
 </h1>
 <!--<p th:text="${canzoni}"></p>-->
 <ul th:each="canzone: ${canzoni}">
-    <li th:text="${canzone.getTitolo()}" /> //chiamando il metodo specifico
+<!--	usando il metodo specifico -->
+    <li th:text="${canzone.getTitolo()}" />
 </ul>
 </body>
 </html>
