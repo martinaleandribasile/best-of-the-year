@@ -9,6 +9,9 @@
 <h1>
 Lista dei movies
 </h1>
-<p th:text="${films}"></p>
+<!--<p th:text="${films}"></p>-->
+<ul th:each="film: ${films}">
+    <li th:text="${film.getTitolo()}" />
+</ul>
 </body>
 </html>

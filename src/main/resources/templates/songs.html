@@ -2,13 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Movies list</title>
+<title>Song list</title>
 </head>
 <body>
 
 <h1>
 Lista delle canzoni
 </h1>
-<p th:text="${canzoni}"></p>
+<!--<p th:text="${canzoni}"></p>-->
+<ul th:each="canzone: ${canzoni}">
+    <li th:text="${canzone.getTitolo()}" />
+</ul>
 </body>
 </html>
