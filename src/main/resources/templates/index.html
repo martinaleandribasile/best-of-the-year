@@ -2,11 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Pagina</title>
+<div th:replace="~{fragments :: head}"></div>
+<title>MyBestOfTheYear</title>
 </head>
 <body>
-<!--<h1>Best of the year by <span th:text="${name}"></span></h1>-->
-<h1 th:text="'Best of the year by ' + ${name}"></h1>
+<div th:insert="~{fragments :: navbar('home')}"></div>
+<div class=" w-50 pt-3 d-flex flex-column align-items-center" style="margin: 0 auto;">
+	<h1  th:text="'Best of the year by ' + ${name}"></h1>
+	<img th:src="@{/img/bestof.jpg}" alt="imgHome" class="w-100">
+	<p class="w-100 border border-dark p-5 text-center">lorem ipsum...</p>
+</div>
 
+<div th:replace="~{fragments :: script}"></div>
 </body>
 </html>

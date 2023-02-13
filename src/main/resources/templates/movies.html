@@ -2,17 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<div th:replace="~{fragments :: head}"></div>
 <title>Movies list</title>
 </head>
 <body>
-
-<h1>
-Lista dei movies
-</h1>
-<!--<p th:text="${films}"></p>-->
-<ul th:each="film: ${films}">
-<!--	usando il toString-->
-    <li th:text="${film}" />
-</ul>
+<div th:insert="~{fragments :: navbar('movies')}"></div>
+<div class="d-flex flex-column align-items-center pt-5">
+	<h1>
+	Lista delle canzoni
+	</h1>
+	<!--<p th:text="${canzoni}"></p>-->
+	<ul class="pt-3 list-group w-25 " >
+	<!--	usando il metodo specifico -->
+	    <li class="list-group-item d-flex justify-content-center align-items-center" th:each="film: ${films}"><a th:href="@{'movies/' + ${film.getId()}}" class="p-0 m-0" style="text-decoration: none;"t th:text="${film.getTitolo()}"></a></li>
+	</ul>
+</div>
+<div th:replace="~{fragments :: script}"></div>
 </body>
 </html>
